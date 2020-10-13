@@ -10,7 +10,7 @@ export default function Main() {
     const { isAuthenticated } = useAuth0()
 
     return (
-        //isAuthenticated && (
+        isAuthenticated && (
             <div>
                 <Navbar />
                 <div className="main_ui">
@@ -18,6 +18,6 @@ export default function Main() {
                     <Details />
                 </div>
             </div>
-        //)
+        )
     )
 }

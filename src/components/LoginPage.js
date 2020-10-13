@@ -8,11 +8,11 @@ export default function LoginPage() {
     const { isAuthenticated } = useAuth0()
 
     return (
-        //!isAuthenticated && (
+        !isAuthenticated && (
             <div className="login_page">
                 <LoginNavbar />
                 <LoginOptions />
             </div>
-        //)
+        )
     )
 }
