@@ -2,22 +2,30 @@ import React from 'react'
 import '../App.css';
 import { useAuth0 } from "@auth0/auth0-react"
 import Navbar from './Navbar'
-import TreeComponent from './TreeComponent';
-import Details from "./Details"
+import MyTree from "./MyTree"
+import About from "./About"
+import Home from "./Home"
+import MyProfile from "./MyProfile"
+import Contact from "./Contact"
+
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import { incomingData, debugData, rootData, fooData } from "../data.js"
 
 export default function Main() {
     const { isAuthenticated } = useAuth0()
 
     return (
-        isAuthenticated && (
-            <div>
+        //isAuthenticated && (
+            <Router>
                 <Navbar />
-                <div className="main_ui">
-                    <TreeComponent/>
-                    <Details />
-                </div>
-            </div>
-        )
+                <Switch>
+                    <Route path="/" exact component={Home} />
+                    <Route path="/mytree" exact component={MyTree} />
+                    <Route path="/myprofile" exact component={MyProfile} />
+                    <Route path="/about" exact component={About} />
+                    <Route path="/contact" exact component={Contact} />
+                </Switch>
+            </Router>
+        //)
     )
 }

@@ -72,16 +72,21 @@ nav {
     height: 100vh;
 }
 
-.main_ui {
+.mytree {
     display: flex;
     border: 2py solid rgb(22, 63, 245);
 }
-.main_ui :first-child {
+.mytree :first-child {
     flex-grow: 3;
 }
-.main_ui >* {
+.mytree >* {
     flex-grow: 1;
 }
 
 .details {
+    border: 2px solid green;
+}
+
+.text {
+    margin: 1rem;
 }
