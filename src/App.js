@@ -9,11 +9,7 @@ export default class App extends Component {
     render() {
         return (
             <TreeProvider>
-                {
-                    /*
-                    <LoginPage />
-                    */
-                }
+                <LoginPage />
                 <Main />
             </TreeProvider>
         )

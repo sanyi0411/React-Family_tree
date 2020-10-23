@@ -15,7 +15,7 @@ export default function Main() {
     const { isAuthenticated } = useAuth0()
 
     return (
-        //isAuthenticated && (
+        isAuthenticated && (
             <Router>
                 <Navbar />
                 <Switch>
@@ -26,6 +26,6 @@ export default function Main() {
                     <Route path="/contact" exact component={Contact} />
                 </Switch>
             </Router>
-        //)
+        )
     )
 }
